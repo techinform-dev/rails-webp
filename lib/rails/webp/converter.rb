@@ -32,7 +32,7 @@ module Rails
             FileUtils.mkdir_p(output_path.dirname) unless Dir.exists?(output_path.dirname)
             # TODO: check app.assets.gzip and act accordingly
             convert_to_webp(input_path, output_path)
-            logger&.info "Writing #{output_path}"
+            logger.info "Writing #{output_path}"
           end
           data
         end
